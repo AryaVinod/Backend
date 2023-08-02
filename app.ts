@@ -1,11 +1,11 @@
-import {Calculator} from "./calculator";
-const initCalc = new Calculator();
+// import {Calculator} from "./calculator";
+// const initCalc = new Calculator();
 
-console.log(initCalc.add(10,3))
-console.log(initCalc.subtract(10,3))
-console.log(initCalc.divide(10,3))
-console.log(initCalc.multiply(10,3))
-console.log(initCalc.modulus(10,3))
+// console.log(initCalc.add(10,3))
+// console.log(initCalc.subtract(10,3))
+// console.log(initCalc.divide(10,3))
+// console.log(initCalc.multiply(10,3))
+// console.log(initCalc.modulus(10,3))
 
 // const http = require("http");
 
@@ -20,15 +20,21 @@ console.log(initCalc.modulus(10,3))
 // })
 
 
-// import express from "express";
+import express from "express";
+import {employeeRouter} from "./employee_router";
+import loggerMiddleware from "./loggerMiddleware";
 
-// const server = express();
+const server = express();
+server.use(express.json());
+server.use(loggerMiddleware);
 
-// server.get('/', (req, res)=>{
-//     console.log(req.url);
-//     res.status(200).send("hello world typescript");
-// })
+server.use('/employees', employeeRouter);
 
-// server.listen(3000, ()=>{
-//     console.log("Server is listening to 3000")
-// })
+employeeRouter.get('/', (req, res)=>{
+    console.log(req.url);
+    res.status(200).send("hello world typescript");
+})
+
+server.listen(3000, ()=>{
+    console.log("Server is listening to 3000")
+})
