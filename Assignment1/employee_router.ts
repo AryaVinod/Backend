@@ -3,15 +3,6 @@ import Employee from "./employee";
 import dataSource from "./data-source";
 
 const employeeRouter = express.Router();
-let counter = 2;
-const employees: Employee[] = [
-    {
-        id: 1, name: "Arya", email:"arya@gmail.com", createdAt : new Date(), updatedAt : new Date()
-    },
-    {
-        id: 2, name: "Ann", email:"ann@gmail.com", createdAt : new Date(), updatedAt : new Date()
-    }]
-
 
 
 employeeRouter.get('/', async(req, res)=>{
@@ -52,8 +43,8 @@ employeeRouter.put('/:id', async(req, res)=>{
     getEmp.email = req.body.email;
     getEmp.name = req.body.name;
     getEmp.updatedAt = new Date();
-    await emp.save(getEmp);
-    res.status(200).send(employees);
+    const newemp = await emp.save(getEmp);
+    res.status(200).send(newemp);
 })
 
 employeeRouter.delete('/:id', async(req, res)=>{

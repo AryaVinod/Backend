@@ -14,6 +14,7 @@ const dataSouce = new DataSource({
     entities: [Employee],
     logging: true,
     namingStrategy: new SnakeNamingStrategy(),
+    synchronize: true
     
 });
 
