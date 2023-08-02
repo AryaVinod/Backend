@@ -53,7 +53,7 @@ employeeRouter.delete('/:id', async(req, res)=>{
     const getEmp = await emp.findOneBy({
         id: Number(req.params.id),
     });
-    await emp.remove(getEmp);
+    await emp.softRemove(getEmp);
     res.status(204).send();
 })
 
