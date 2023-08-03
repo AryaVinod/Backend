@@ -9,6 +9,9 @@ class Employee{
     @Column()
     name: string;
 
+    @Column({nullable:true})
+    age: string;
+
     @Column()
     email: string;
 
