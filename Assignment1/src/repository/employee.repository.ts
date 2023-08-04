@@ -10,9 +10,12 @@ class EmployeeRepository{
 
     }
 
-    findEmployeeByID(id: number): Promise<Employee>{
-        return this.employeeRepository.findOneBy({
-            id: id,
+    async findEmployeeByID(id: number): Promise<Employee>{
+        return this.employeeRepository.findOne({
+            where:{id:id},
+            relations : {
+                address: true,
+            }
         });
     }
 

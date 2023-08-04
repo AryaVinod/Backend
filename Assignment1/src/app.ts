@@ -21,10 +21,11 @@
 
 
 import "reflect-metadata";
-import express from "express";
+import express, { NextFunction, Request, Response } from "express";
 import employeeRoute from "./route/employee.route";
 import loggerMiddleware from "./middleware/logger.middleware";
 import dataSource from "./db/postgres.db"
+import errorMiddleware from "./middleware/error.middleware";
 
 const server = express();
 server.use(express.json());
@@ -36,6 +37,8 @@ server.get('/', (req, res)=>{
     console.log(req.url);
     res.status(200).send("hello world typescript");
 });
+
+server.use(errorMiddleware);
 
 (async () => {
     await dataSource.initialize();
