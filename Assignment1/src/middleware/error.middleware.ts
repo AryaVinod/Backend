@@ -7,7 +7,7 @@ const errorMiddleware = (error: Error, req: express.Request, res: express.Respon
     try{
         console.log(error.stack);
         if(error instanceof ValidationException){
-            res.status(error.status).send({
+            res.status(400).send({
                 message: error.message,
                 errors: error.errors,
             });

@@ -1,12 +1,12 @@
 import { ValidationError } from "class-validator";
 
 class ValidationException extends Error {
-    public status: number;
+    //public status: number;
     public errors: Object;
 
-    constructor(errors: ValidationError[], status: number, message: string) {
-        super(message);
-        this.status = status;
+    constructor(errors: ValidationError[]) {
+        super();
+        //this.status = status;
         this.errors = this.parseErrors(errors);
         console.log(this.errors);
     }

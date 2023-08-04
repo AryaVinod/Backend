@@ -41,7 +41,7 @@ class EmployeeController{
 
             if(errors.length > 0){
                 console.log(errors);
-                throw new ValidationException(errors, 400, "Validation Error");
+                throw new ValidationException(errors);
             }
 
             const employeeName = req.body.name;
