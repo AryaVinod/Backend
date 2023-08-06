@@ -15,6 +15,7 @@ const errorMiddleware = (error: Error, req: express.Request, res: express.Respon
         else if (error instanceof HttpException){
             res.status(error.status).send({error: error.message});
         } else{
+            console.log(error);
             res.status(500).send(error.message);
         }
     } catch (err){

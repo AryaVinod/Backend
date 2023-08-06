@@ -1,30 +1,36 @@
-import { DataSource, Repository } from "typeorm";
+import { DataSource, Repository, UpdateResult } from "typeorm";
 import Employee from "../entity/employee.entity";
+import { UpdateEmployeeDto } from "../dto/update-employee.dto";
 
 class EmployeeRepository{
 
     constructor(private employeeRepository: Repository<Employee>){}
 
     findAllEmployee(): Promise<Employee[]>{
-        return this.employeeRepository.find();
+        return this.employeeRepository.find({
+            relations : {
+                address: true,
+            }
+        });
 
     }
 
-    async findEmployeeByID(id: number): Promise<Employee>{
+    async findEmployeeBy(filter: Partial<Employee> ): Promise<Employee>{
         return this.employeeRepository.findOne({
-            where:{id:id},
+            where:filter,
             relations : {
                 address: true,
             }
         });
     }
 
+
     saveNewEmp(employee: Employee): Promise<Employee>{
         return this.employeeRepository.save(employee);
     }
 
-    updateEmp(employee: Employee): Promise<Employee>{
-        return this.employeeRepository.save(employee);
+    updateEmp(id: number, updateEmployeeDto: UpdateEmployeeDto): Promise<UpdateResult>{
+        return this.employeeRepository.update({id:id}, updateEmployeeDto);
     }
 
     async deleteEmp(employee: Employee): Promise<Employee>{

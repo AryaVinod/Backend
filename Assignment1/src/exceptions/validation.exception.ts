@@ -4,8 +4,8 @@ class ValidationException extends Error {
     //public status: number;
     public errors: Object;
 
-    constructor(errors: ValidationError[]) {
-        super();
+    constructor(errors: ValidationError[], message: string) {
+        super(message);
         //this.status = status;
         this.errors = this.parseErrors(errors);
         console.log(this.errors);

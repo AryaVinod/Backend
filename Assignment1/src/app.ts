@@ -20,23 +20,33 @@
 // })
 
 
+import * as dotenv from "dotenv";
+dotenv.config({path: __dirname+'/.env'});
 import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
 import employeeRoute from "./route/employee.route";
+import departmentRoute from "./route/department.route";
 import loggerMiddleware from "./middleware/logger.middleware";
 import dataSource from "./db/postgres.db"
 import errorMiddleware from "./middleware/error.middleware";
+import Role from "./utils/role.enum";
+
 
 const server = express();
 server.use(express.json());
 server.use(loggerMiddleware);
 
 server.use('/employees', employeeRoute);
+server.use('/departments', departmentRoute);
 
 server.get('/', (req, res)=>{
     console.log(req.url);
-    res.status(200).send("hello world typescript");
+    res.status(200).send("Employee Management");
 });
+
+server.get("/api/roles", (req,res)=>{
+    res.status(200).send(Role)
+  })
 
 server.use(errorMiddleware);
 

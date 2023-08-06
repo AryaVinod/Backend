@@ -6,7 +6,7 @@ import { SnakeNamingStrategy } from "typeorm-naming-strategies";
 
 const dataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
+    host: process.env.POSTGRES_HOST,
     port: 8765,
     username: "postgres",
     password: "postgres",

@@ -1,7 +1,7 @@
 import { IsNotEmpty, IsString } from "class-validator";
 
-class CreateAddressDto{
-
+class UpdateAddressDto{
+    
     @IsNotEmpty()
     @IsString()
     line1: string;
@@ -9,10 +9,6 @@ class CreateAddressDto{
     @IsNotEmpty()
     @IsString()
     line2: string;
-
-    @IsNotEmpty()
-    @IsString()
-    city: string;
 
     @IsNotEmpty()
     @IsString()
@@ -27,4 +23,4 @@ class CreateAddressDto{
     pincode: string;
 }
 
-export default CreateAddressDto;
+export default UpdateAddressDto;
