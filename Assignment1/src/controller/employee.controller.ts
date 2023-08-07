@@ -9,6 +9,7 @@ import authenticate from "../middleware/authenticate.middleware";
 import authorize from "../middleware/authorize.middleware"
 import Role from "../utils/role.enum";
 import { UpdateEmployeeDto } from "../dto/update-employee.dto";
+import logger from "../logger/logger";
 
 class EmployeeController{
     public router: express.Router;
@@ -25,15 +26,19 @@ class EmployeeController{
     }
 
     getAllEmployees = async(req: express.Request, res: express.Response)=>{
+        const reqStart = Date.now()
         const employees = await this.employeeService.getAllEmployees();
-        res.status(200).send(employees);
+        logger.info("Fetched All Employees Successfully")
+        res.status(200).send({data: employees, errors: null, message: "ok", meta:{length: employees.length,took:Date.now()-reqStart,total:employees.length}});
     }
 
     getEmployeeByID = async(req: express.Request, res: express.Response, next:NextFunction)=>{
         try{
+            const reqStart = Date.now()
             const employeeID = Number(req.params.id);
             const employee = await this.employeeService.getEmployeeByID(employeeID);
-            res.status(200).send(employee);
+            logger.info("Fetched Employee by ID Successfully")
+            res.status(200).send({data: employee, errors: null, message: "ok", meta:{length: 1,took:Date.now()-reqStart,total:1}});
         } catch (error){
             next(error);
         }
@@ -41,6 +46,7 @@ class EmployeeController{
 
     addEmployee = async(req: express.Request, res: express.Response, next: NextFunction)=>{
         try{
+            const reqStart = Date.now()
             const createEmployeeDto = plainToInstance(CreateEmployeeDto, req.body);
             const errors = await validate(createEmployeeDto);
 
@@ -49,7 +55,8 @@ class EmployeeController{
                 throw new ValidationException(errors, "Validation Errors Occured");
             }
             const employee = await this.employeeService.addNewEmployee(createEmployeeDto);
-            res.status(200).send(employee);
+            logger.info("Added Employee Successfully")
+            res.status(200).send({data: employee, errors: null, message: "ok", meta:{length: 1,took:Date.now()-reqStart,total:1}});
         } catch(error) {
             next(error);
         }
@@ -58,6 +65,7 @@ class EmployeeController{
 
     updateEmployeeByID = async(req: express.Request, res: express.Response, next: NextFunction)=>{
         try{
+            const reqStart = Date.now()
             const id = Number(req.params.id);
             await this.employeeService.getEmployeeByID(id);
             
@@ -70,7 +78,8 @@ class EmployeeController{
             }
 
             const employee = await this.employeeService.updateEmployee(id, updateEmployeeDto);
-            res.status(200).send(employee);
+            logger.info("Updated Employee Successfully")
+            res.status(200).send({data: employee, errors: null, message: "ok", meta:{length: 1,took:Date.now()-reqStart,total:1}});
 
         } catch(error){
             next(error);
@@ -81,6 +90,7 @@ class EmployeeController{
     deleteEmployeeByID = async(req: express.Request, res: express.Response)=>{
         const employeeID = Number(req.params.id);
         const employee = await this.employeeService.deleteEmployeeByID(employeeID);
+        logger.info("Deleted Employee Successfully")
         res.status(200).send();
     }
 
@@ -91,8 +101,10 @@ class EmployeeController{
     ) => {
         const {username, password} = req.body;
         try{
+            const reqStart = Date.now()
             const token = await this.employeeService.loginEmployee(username, password);
-            res.status(200).send({data: token});
+            logger.info("Logged In Successfully")
+            res.status(200).send({data: token, errors: null, message: "ok", meta:{length: 1,took:Date.now()-reqStart,total:1}});
         } catch(error){
             next(error);
         }

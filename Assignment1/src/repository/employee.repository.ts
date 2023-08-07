@@ -31,7 +31,7 @@ class EmployeeRepository{
           ...updateEmployeeDto,
           address: updateEmployeeDto.address
             ? {
-                id: (await this.generateIDForAddress(id)).id,
+                id: (await this.getAddress(id)).id,
                 ...updateEmployeeDto.address,
               }
             : undefined,
@@ -40,9 +40,6 @@ class EmployeeRepository{
         const employee = await this.employeeRepository.preload(partialEmployeeEntity);
     
         return this.employeeRepository.save(employee);
-    
-        // const user = this.empRepository.update(id,{...updateEmployeeDto});
-        // return this.findOneBy({id:id})
       }
 
 
@@ -58,7 +55,7 @@ class EmployeeRepository{
         return this.employeeRepository.softRemove(employee);
     }
 
-    async generateIDForAddress(id): Promise<Address> {
+    async getAddress(id): Promise<Address> {
         const employee = await this.findEmployeeBy({ id: id });
         return employee.address;
       }

@@ -1,3 +1,5 @@
+import { CreateDepartmentDto } from "../dto/create-department.dto";
+import { UpdateDepartmentDto } from "../dto/update-department.dto";
 import { Department } from "../entity/department.entity";
 import HttpException from "../exceptions/http.exception";
 import { DepartmentRepository } from "../repository/department.repository";
@@ -5,9 +7,9 @@ import { DepartmentRepository } from "../repository/department.repository";
 export class DepartmentService {
     constructor(private departmentRepository: DepartmentRepository) {}
   
-    createDepartment(name: string): Promise<Department> {
+    createDepartment(createDeptDto: CreateDepartmentDto): Promise<Department> {
       const newDepartment = new Department();
-      newDepartment.name = name;
+      newDepartment.name = createDeptDto.name;
       return this.departmentRepository.createDepartment(newDepartment);
     }
   
@@ -24,9 +26,9 @@ export class DepartmentService {
       return department;
     }
   
-    async updateDepartment(name: string, id: number): Promise<Department> {
+    async updateDepartment(id: number, updateDeptDto: UpdateDepartmentDto): Promise<Department> {
       const departmenttoupdate = await this.departmentRepository.getDepartment(id);
-      departmenttoupdate.name = name;
+      departmenttoupdate.name = updateDeptDto.name;
       return this.departmentRepository.updateDepartment(departmenttoupdate);
     }
   

@@ -9,6 +9,7 @@ import jsonwebtoken from "jsonwebtoken";
 import { jwtPayload } from "../utils/jwtPayload.type";
 import { Department } from "../entity/department.entity";
 import { UpdateEmployeeDto } from "../dto/update-employee.dto";
+import logger from "../logger/logger";
 
 
 class EmployeeService{
@@ -61,8 +62,6 @@ class EmployeeService{
         if(!emp){
             throw new HttpException(404, `Employee not found with ID ${id}`);
         }
-        // const updated = await this.employeeRepository.updateEmp(id, updateEmployeeDto);
-        // return await this.employeeRepository.findEmployeeBy({id:id});
 
         const { departmentId, ...others } = updateEmployeeDto;
 
@@ -88,6 +87,7 @@ class EmployeeService{
 
         const result = await bcrypt.compare(password, employee.password);
         if(!result){
+            logger.error("Incorrect Username or Password")
             throw new HttpException(401, "Incorrect username or password");
         }
 
@@ -101,7 +101,7 @@ class EmployeeService{
             expiresIn: "1h"
         });
 
-        return {token: token};
+        return {token, employee};
     }
 }
 
