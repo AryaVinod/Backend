@@ -42,4 +42,9 @@ export class UpdateEmployeeDto {
     @IsNotEmpty()
     @IsString()
     experience : number;
+
+    @IsOptional()
+    @IsNotEmpty()
+    @IsString()
+    departmentId : string;
   }

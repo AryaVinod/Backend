@@ -29,7 +29,8 @@ class Employee extends AbstractEntity{
     joiningDate: string;
 
     @ManyToOne(()=> Department, (department) => department.employees, {cascade: true})
-    department: Department;
+    @JoinColumn()
+    department_id: Department;
 }
 
 export default Employee;

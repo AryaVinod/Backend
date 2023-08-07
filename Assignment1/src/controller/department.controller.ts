@@ -5,6 +5,8 @@ import { CreateDepartmentDto } from "../dto/create-department.dto";
 import ValidationException from "../exceptions/validation.exception";
 import { validate } from "class-validator";
 import { UpdateDepartmentDto } from "../dto/update-department.dto";
+import authorize from "../middleware/authorize.middleware";
+import Role from "../utils/role.enum";
 
 export class DepartmentController {
     public router: Router;

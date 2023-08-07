@@ -37,10 +37,12 @@ class EmployeeService{
         newEmp.experience = employeeDto.experience;
         newEmp.joiningDate = employeeDto.joiningDate;
 
-        const newDept = new Department();
-        newDept.name = employeeDto.department;
+        newEmp.department_id = <any>employeeDto.department_id;
 
-        newEmp.department = newDept;
+        // const newDept = new Department();
+        // newDept.name = employeeDto.department;
+
+        // newEmp.department = newDept;
 
         const newAddress = new Address();
         newAddress.line1 = employeeDto.address.line1;
@@ -59,8 +61,14 @@ class EmployeeService{
         if(!emp){
             throw new HttpException(404, `Employee not found with ID ${id}`);
         }
-        const updated = await this.employeeRepository.updateEmp(id, updateEmployeeDto);
-        return await this.employeeRepository.findEmployeeBy({id:id});
+        // const updated = await this.employeeRepository.updateEmp(id, updateEmployeeDto);
+        // return await this.employeeRepository.findEmployeeBy({id:id});
+
+        const { departmentId, ...others } = updateEmployeeDto;
+
+        const newupdateEmployeeDto = { departmentId: departmentId, ...others };
+
+        return await this.employeeRepository.updateEmp(id, newupdateEmployeeDto);
     }
 
     async deleteEmployeeByID(id: number): Promise<Employee>{

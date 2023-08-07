@@ -37,7 +37,7 @@ class CreateEmployeeDto{
 
     @IsNotEmpty()
     @IsString()
-    department: string;
+    department_id: string;
 
 }
 

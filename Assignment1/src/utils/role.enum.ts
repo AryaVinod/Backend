@@ -5,11 +5,12 @@ export enum Role{
     HR = "HR",
 };
 
-export const userRoles = {
-    superadmin: [Role.ADMIN],
-    admin: [Role.HR, Role.ADMIN],
-    user: [Role.HR, Role.ADMIN],
-};
+
+// export const userRoles = {
+//     superadmin: [Role.ADMIN],
+//     admin: [Role.HR, Role.ADMIN],
+//     user: [Role.HR, Role.ADMIN],
+// };
 
 
 export default Role;
