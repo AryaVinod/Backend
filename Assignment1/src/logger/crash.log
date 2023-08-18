@@ -1,0 +1,165 @@
+[2023-08-16T09:38:10.282Z] undefined [31merror[39m: uncaughtException: connect ECONNREFUSED 127.0.0.1:8765
+Error: connect ECONNREFUSED 127.0.0.1:8765
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)
+[2023-08-16T09:38:27.158Z] undefined [31merror[39m: uncaughtException: connect ECONNREFUSED 127.0.0.1:8765
+Error: connect ECONNREFUSED 127.0.0.1:8765
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)
+[2023-08-16T09:40:12.820Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:40:28.863Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:42:30.537Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:49:53.767Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:50:26.340Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:51:45.923Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:52:11.490Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T09:55:15.613Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T10:12:33.513Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T10:12:59.811Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T10:13:49.721Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T10:15:33.371Z] undefined [31merror[39m: uncaughtException: database "training" does not exist
+error: database "training" does not exist
+    at Parser.parseErrorMessage (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (node:events:514:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+[2023-08-16T11:51:03.209Z] undefined [31merror[39m: uncaughtException: (0 , cors_1.cors) is not a function
+TypeError: (0 , cors_1.cors) is not a function
+    at Object.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/dist/src/app.js:66:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:23:47
+[2023-08-16T11:51:24.705Z] undefined [31merror[39m: uncaughtException: (0 , cors_1.cors) is not a function
+TypeError: (0 , cors_1.cors) is not a function
+    at Object.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/dist/src/app.js:66:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:23:47
+[2023-08-16T11:52:18.037Z] undefined [31merror[39m: uncaughtException: (0 , cors_1.cors) is not a function
+TypeError: (0 , cors_1.cors) is not a function
+    at Object.<anonymous> (/home/arya/Documents/Backend-Practise/Assignment1/dist/src/app.js:66:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:23:47
