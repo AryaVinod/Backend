@@ -28,8 +28,11 @@ class Employee extends AbstractEntity{
     @Column()
     joiningDate: string;
 
+    @Column({name: 'department_id'})
+    departmetId: number;
+
     @ManyToOne(()=> Department, (department) => department.employees, {cascade: true})
-    @JoinColumn()
+    @JoinColumn({name: 'department_id'})
     department_id: Department;
 }
 

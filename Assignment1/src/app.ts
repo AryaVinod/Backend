@@ -30,9 +30,11 @@ import loggerMiddleware from "./middleware/logger.middleware";
 import dataSource from "./db/postgres.db"
 import errorMiddleware from "./middleware/error.middleware";
 import Role from "./utils/role.enum";
+import cors from 'cors';
 
 
 const server = express();
+server.use(cors());
 server.use(express.json());
 server.use(loggerMiddleware);
 
@@ -51,9 +53,15 @@ server.get("/api/roles", (req,res)=>{
 server.use(errorMiddleware);
 
 (async () => {
+    try {
     await dataSource.initialize();
-    server.listen(3000, ()=>{
-        console.log("Server is listening to 3000");
-    });
+    } catch(err) {
+        console.log(err)
+    }
+    server.listen(3001, ()=>{
+        console.log("Server is listening to 3001");
+    }).on('error', function(err) { 
+        console.log(err)
+    })
 })();
 

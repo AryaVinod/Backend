@@ -20,7 +20,7 @@ class EmployeeController{
         this.router.get("/", authenticate, this.getAllEmployees);
         this.router.get("/:id", authenticate, this.getEmployeeByID);
         this.router.post("/", authenticate, authorize([Role.ADMIN, Role.HR]), this.addEmployee);
-        this.router.put("/:id", authenticate, authorize([Role.ADMIN, Role.HR]), this.updateEmployeeByID);
+        this.router.patch("/:id", authenticate, authorize([Role.ADMIN, Role.HR]), this.updateEmployeeByID);
         this.router.delete("/:id", authenticate, authorize([Role.ADMIN, Role.HR]), this.deleteEmployeeByID);
         this.router.post("/login", this.loginEmployee);
     }

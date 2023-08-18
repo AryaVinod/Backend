@@ -36,8 +36,8 @@ class CreateEmployeeDto{
     experience: number;
 
     @IsNotEmpty()
-    @IsString()
-    department_id: string;
+    @IsNumber()
+    department_id: number;
 
 }
 

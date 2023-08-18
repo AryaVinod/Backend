@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsObject, IsOptional, IsString, ValidateNested } from "class-validator";
+import { IsEnum, IsNotEmpty, IsNumber, IsObject, IsOptional, IsString, ValidateNested } from "class-validator";
 import UpdateAddressDto from "./update-address.dto";
 import { Type } from "class-transformer";
 import Address from "../entity/address.entity";
@@ -40,11 +40,11 @@ export class UpdateEmployeeDto {
 
     @IsOptional()
     @IsNotEmpty()
-    @IsString()
+    @IsNumber()
     experience : number;
 
     @IsOptional()
     @IsNotEmpty()
-    @IsString()
-    departmentId : string;
+    @IsNumber()
+    departmentId : number;
   }

@@ -38,7 +38,8 @@ class EmployeeService{
         newEmp.experience = employeeDto.experience;
         newEmp.joiningDate = employeeDto.joiningDate;
 
-        newEmp.department_id = <any>employeeDto.department_id;
+        // newEmp.department_id = <any>employeeDto.department_id;
+        newEmp.departmetId = Number(<any>employeeDto.department_id);
 
         // const newDept = new Department();
         // newDept.name = employeeDto.department;
